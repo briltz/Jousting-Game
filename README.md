@@ -1,2 +1,2 @@
 # Jousting-Game
- A 2D Gotdot jousing game
+ A 2D Gotdot Jousting game
