@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgxiea34av6xr"]
+
+[ext_resource type="Script" path="res://Scripts/Main Menu.gd" id="1_x7a8m"]
+[ext_resource type="Theme" uid="uid://eu2836nyqrtf" path="res://menu_button.tres" id="2_p1637"]
+[ext_resource type="FontFile" uid="uid://bcea7thqjdhf2" path="res://MedievalSharp-Regular.ttf" id="3_l54vp"]
+[ext_resource type="AudioStream" uid="uid://d4akathfhrcxw" path="res://Audio/JOUST_THEME_2.mp3" id="4_ttr2e"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x7a8m")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.223529, 0.443137, 0.580392, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_p1637")
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_p1637")
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_p1637")
+text = "Quit"
+
+[node name="Title Center Container" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -349.0
+offset_top = 33.0
+offset_right = 351.0
+offset_bottom = 163.0
+grow_horizontal = 2
+
+[node name="Title" type="RichTextLabel" parent="Title Center Container"]
+custom_minimum_size = Vector2(700, 130)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_l54vp")
+theme_override_font_sizes/normal_font_size = 99
+text = "Cool Game Title"
+
+[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ttr2e")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

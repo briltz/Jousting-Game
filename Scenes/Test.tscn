@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://do2f7st8ph7pt"]
 
-[ext_resource type="Texture2D" uid="uid://viskol3goy3h" path="res://icon.svg" id="1_b4seq"]
-[ext_resource type="Script" path="res://testScript.gd" id="1_ejy0f"]
+[ext_resource type="Script" path="res://Scripts/testScript.gd" id="1_hnsuk"]
+[ext_resource type="Texture2D" uid="uid://viskol3goy3h" path="res://Graphics/icon.svg" id="2_u4wco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bopaj"]
 size = Vector2(39.977, 40)
@@ -32,7 +32,7 @@ node_b = NodePath("RigidBody2D2")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="PinJoint2D"]
 position = Vector2(42, 46)
-script = ExtResource("1_ejy0f")
+script = ExtResource("1_hnsuk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PinJoint2D/RigidBody2D"]
 position = Vector2(93, -43.5)
@@ -41,7 +41,7 @@ shape = SubResource("RectangleShape2D_wxhli")
 [node name="Sprite2D" type="Sprite2D" parent="PinJoint2D/RigidBody2D/CollisionShape2D"]
 position = Vector2(-1, 1)
 scale = Vector2(2.44, 0.320001)
-texture = ExtResource("1_b4seq")
+texture = ExtResource("2_u4wco")
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="PinJoint2D"]
 position = Vector2(-243, 46)
@@ -53,4 +53,4 @@ shape = SubResource("RectangleShape2D_wxhli")
 [node name="Sprite2D" type="Sprite2D" parent="PinJoint2D/RigidBody2D2/CollisionShape2D"]
 position = Vector2(-1, 1)
 scale = Vector2(2.44, 0.320001)
-texture = ExtResource("1_b4seq")
+texture = ExtResource("2_u4wco")
