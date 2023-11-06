@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgqbrcmqxvgej"]
+[gd_scene load_steps=3 format=3 uid="uid://dgqbrcmqxvgej"]
 
-[ext_resource type="Script" path="res://Scripts/Options Menu.gd" id="1_0bf54"]
+[ext_resource type="Script" path="res://Scripts/Options Menu.gd" id="1_y8uvv"]
+[ext_resource type="Theme" uid="uid://eu2836nyqrtf" path="res://menu_button.tres" id="2_4qc2n"]
 
 [node name="Options Menu" type="Control"]
 layout_mode = 3
@@ -9,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0bf54")
+script = ExtResource("1_y8uvv")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -31,7 +32,22 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_4qc2n")
 text = "Back
 "
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 2
+offset_left = 6.0
+offset_top = -426.0
+offset_right = 3846.0
+offset_bottom = 1734.0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer2"]
+custom_minimum_size = Vector2(1700, 300)
+layout_mode = 2
+theme = ExtResource("2_4qc2n")
+text = "THERE ARE NO OPTIONS"
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

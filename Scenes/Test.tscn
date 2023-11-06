@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://do2f7st8ph7pt"]
+[gd_scene load_steps=7 format=3 uid="uid://do2f7st8ph7pt"]
 
 [ext_resource type="Script" path="res://Scripts/testScript.gd" id="1_hnsuk"]
 [ext_resource type="Texture2D" uid="uid://viskol3goy3h" path="res://Graphics/icon.svg" id="2_u4wco"]
+[ext_resource type="Theme" uid="uid://eu2836nyqrtf" path="res://menu_button.tres" id="3_n70k1"]
+[ext_resource type="Script" path="res://Scripts/menu_button.gd" id="4_oftvf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bopaj"]
 size = Vector2(39.977, 40)
@@ -54,3 +56,19 @@ shape = SubResource("RectangleShape2D_wxhli")
 position = Vector2(-1, 1)
 scale = Vector2(2.44, 0.320001)
 texture = ExtResource("2_u4wco")
+
+[node name="Menu" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -1867.0
+offset_top = 742.0
+offset_right = -1463.0
+offset_bottom = 945.0
+grow_vertical = 0
+theme = ExtResource("3_n70k1")
+text = "Menu"
+script = ExtResource("4_oftvf")
+
+[connection signal="pressed" from="Menu" to="PinJoint2D/RigidBody2D" method="_on_menu_pressed"]
+[connection signal="pressed" from="Menu" to="Menu" method="_on_pressed"]

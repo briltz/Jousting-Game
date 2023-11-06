@@ -14,3 +14,9 @@ config/name="Jousting-Game"
 run/main_scene="res://Scenes/Main Menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://Graphics/icon.svg"
+
+[display]
+
+window/size/viewport_width=3840
+window/size/viewport_height=2000
+window/size/mode=2

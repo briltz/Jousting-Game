@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp4f1m5348nx3"]
+
+[ext_resource type="Theme" uid="uid://eu2836nyqrtf" path="res://menu_button.tres" id="1_38oj7"]
+[ext_resource type="Script" path="res://Scripts/home_button.gd" id="2_ll132"]
+
+[node name="Home" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 96.0
+offset_right = 1142.0
+offset_bottom = 294.0
+theme = ExtResource("1_38oj7")
+text = "Gold: 1,000,000"
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2998.0
+offset_top = 1742.0
+offset_right = 3785.0
+offset_bottom = 1945.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("1_38oj7")
+text = "Main Menu"
+script = ExtResource("2_ll132")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

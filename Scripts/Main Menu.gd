@@ -12,12 +12,16 @@ func _process(delta):
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Test.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Home.tscn")
 
 
 func _on_options_pressed():
-	get_tree().change_scene_to_file("res://Options Menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Options Menu.tscn")
 
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_debug_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Test.tscn")
