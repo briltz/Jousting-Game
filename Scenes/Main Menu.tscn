@@ -34,10 +34,17 @@ custom_minimum_size = Vector2(1200, 0)
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Play" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+[node name="New Game" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_p1637")
-text = "Play"
+text = "New Game
+"
+
+[node name="Load Game" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_p1637")
+text = "Load Game
+"
 
 [node name="Options" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -54,10 +61,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -877.0
-offset_top = 181.0
-offset_right = 923.0
-offset_bottom = 581.0
+offset_left = -903.0
+offset_top = 117.0
+offset_right = 897.0
+offset_bottom = 517.0
 grow_horizontal = 2
 
 [node name="Title" type="RichTextLabel" parent="Title Center Container"]
@@ -71,7 +78,7 @@ text = "Cool Game Title"
 stream = ExtResource("4_ttr2e")
 autoplay = true
 
-[node name="Debug" type="Button" parent="."]
+[node name="Test" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -82,9 +89,25 @@ offset_right = 517.0
 offset_bottom = -76.0
 grow_vertical = 0
 theme = ExtResource("2_p1637")
-text = "Debug"
+text = "Test"
 
-[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -499.0
+offset_top = -170.0
+offset_right = -85.0
+offset_bottom = -93.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 50
+text = "Version 0.0.1"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/New Game" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Debug" to="." method="_on_debug_pressed"]
+[connection signal="pressed" from="Test" to="." method="_on_debug_pressed"]
