@@ -45,7 +45,7 @@ offset_bottom = 1734.0
 mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer2"]
-custom_minimum_size = Vector2(1700, 300)
+custom_minimum_size = Vector2(1400, 400)
 layout_mode = 2
 theme = ExtResource("2_4qc2n")
 text = "THERE ARE NO OPTIONS"

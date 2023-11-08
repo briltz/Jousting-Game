@@ -108,6 +108,7 @@ theme_override_font_sizes/normal_font_size = 50
 text = "Version 0.0.1"
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/New Game" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Load Game" to="." method="_on_load_game_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Test" to="." method="_on_debug_pressed"]

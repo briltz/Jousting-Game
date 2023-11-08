@@ -15,6 +15,11 @@ run/main_scene="res://Scenes/Main Menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://Graphics/icon.svg"
 
+[autoload]
+
+StaticPlayer="*res://Scripts/static_player.gd"
+StateManager="*res://Scripts/state_manager.gd"
+
 [display]
 
 window/size/viewport_width=3840
