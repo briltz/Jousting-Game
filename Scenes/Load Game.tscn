@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3bf24gg86k"]
 
-[ext_resource type="Script" path="res://Scenes/load_game.gd" id="1_eujk1"]
+[ext_resource type="Script" path="res://Scripts/load_game.gd" id="1_8gplb"]
 [ext_resource type="Theme" uid="uid://eu2836nyqrtf" path="res://menu_button.tres" id="1_yptl4"]
 
 [node name="Load Game" type="Control"]
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_eujk1")
+script = ExtResource("1_8gplb")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

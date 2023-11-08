@@ -17,8 +17,8 @@ config/icon="res://Graphics/icon.svg"
 
 [autoload]
 
-StaticPlayer="*res://Scripts/static_player.gd"
-StateManager="*res://Scripts/state_manager.gd"
+StaticPlayer="*res://Scripts/Singletons/static_player.gd"
+StateManager="*res://Scripts/Singletons/state_manager.gd"
 
 [display]
 

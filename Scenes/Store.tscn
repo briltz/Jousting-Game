@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg8sllhx45mvx"]
+
+[ext_resource type="Theme" uid="uid://eu2836nyqrtf" path="res://menu_button.tres" id="1_i7d8s"]
+[ext_resource type="Script" path="res://Scenes/Store.gd" id="1_v1rso"]
+
+[node name="Store" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v1rso")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -261.0
+offset_right = 365.0
+offset_bottom = -88.0
+grow_vertical = 0
+theme = ExtResource("1_i7d8s")
+text = "Back"
+
+[node name="TabBar" type="TabBar" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 76.0
+offset_bottom = -1751.0
+theme = ExtResource("1_i7d8s")
+tab_alignment = 1
+tab_count = 5
+tab_0/title = " Lance "
+tab_1/title = " Shield "
+tab_2/title = " Helmet "
+tab_3/title = " Body "
+tab_4/title = " Legs "
+
+[node name="TabContainer" type="TabContainer" parent="TabBar"]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 233.0
+offset_right = 2960.0
+offset_bottom = 1615.0
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
